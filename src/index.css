@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    scroll-behavior: smooth;
+    background-color: #06192a;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+    color: #0f172a;
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(6, 25, 42, 0.64), rgba(6, 25, 42, 0.64)),
+      url('./assets/water-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .page-background {
+    color: #0f172a;
+  }
+  .hero-water-background {
+    background: transparent;
+  }
+  .showcase-product-image {
+    -webkit-mask-image: radial-gradient(ellipse 64% 76% at center, #000 38%, transparent 100%);
+    mask-image: radial-gradient(ellipse 64% 76% at center, #000 38%, transparent 100%);
+  }
+  @supports not (mask-image: radial-gradient(ellipse, #000, transparent)) {
+    .showcase-product-image {
+      border-radius: 2rem;
+    }
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .glass-dark {
+    background: rgba(10, 24, 69, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(142, 213, 255, 0.15);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #329fff 0%, #1b7ef5 50%, #1465e1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-light {
+    background: linear-gradient(135deg, #d9f1ff 0%, #8ed7ff 50%, #59beff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-aqua-gradient shadow-lg shadow-aqua-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-aqua-500/40 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-aqua-700 border-2 border-aqua-500/40 transition-all duration-300 hover:bg-aqua-500 hover:text-white hover:border-aqua-500;
+  }
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-aqua-700 bg-white shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-green {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-green-500 shadow-lg shadow-green-500/30 transition-all duration-300 hover:bg-green-600 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold font-display tracking-tight;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-gray-800 transition-all duration-200 focus:border-aqua-500 focus:ring-2 focus:ring-aqua-500/20 outline-none;
+  }
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-aqua-500/20;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #eef9ff;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #329fff, #1465e1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1b7ef5, #1652b6);
+}
+
+/* Water wave animation */
+.water-wave {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,154.7C672,128,768,96,864,106.7C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 1440px 320px;
+  animation: wave 8s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-50px); }
+}
+
+/* Droplet floating animation */
+@keyframes droplet-fall {
+  0% { transform: translateY(-100vh) scale(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(100vh) scale(1); opacity: 0; }
+}
