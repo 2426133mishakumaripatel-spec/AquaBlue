@@ -1,4 +1,5 @@
 import { Star, Quote } from 'lucide-react';
+import { useState } from 'react';
 import { TESTIMONIALS } from '../data';
 
 export default function Testimonials() {
@@ -42,25 +43,40 @@ export default function Testimonials() {
               </p>
 
               <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                <div className="w-11 h-11 rounded-full overflow-hidden flex-shrink-0 bg-aqua-50">
-                  <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
-                </div>
+                <TestimonialAvatar name={t.name} src={t.avatar} />
                 <div>
                   <p className="font-semibold text-navy-900 text-sm">{t.name}</p>
-                  {t.sample && (
-                    <p className="text-xs text-gray-400">Sample testimonial</p>
-                  )}
+                  <p className="text-xs text-gray-400">{t.location}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        <p className="text-center text-xs text-gray-400 mt-8 max-w-2xl mx-auto">
-          These are sample testimonials shown for demonstration. Real customer reviews will
-          replace these once the website is live and serving customers.
-        </p>
       </div>
     </section>
+  );
+}
+
+function TestimonialAvatar({ name, src }: { name: string; src: string }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  const initials = name.split(' ').slice(0, 2).map((part) => part[0]).join('');
+
+  return (
+    <div
+      aria-hidden="true"
+      className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-aqua-50 text-aqua-600 flex items-center justify-center text-sm font-semibold"
+    >
+      {imageFailed ? (
+        initials
+      ) : (
+        <img
+          src={src}
+          alt=""
+          loading="lazy"
+          onError={() => setImageFailed(true)}
+          className="w-12 h-12 rounded-full object-cover"
+        />
+      )}
+    </div>
   );
 }

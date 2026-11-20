@@ -2,11 +2,7 @@ import { Target, Heart, Sparkles, Droplet } from 'lucide-react';
 
 export default function About() {
   return (
-<<<<<<< HEAD
     <section id="about" className="relative py-20 lg:py-28 bg-white/85 overflow-hidden">
-=======
-    <section id="about" className="relative py-20 lg:py-28 bg-white overflow-hidden">
->>>>>>> d926c88325eed13913933e08358a034806667a1e
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-aqua-50 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-aqua-100/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />

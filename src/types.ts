@@ -24,10 +24,10 @@ export interface CartItem {
 export interface Testimonial {
   id: string;
   name: string;
+  location: string;
   avatar: string;
   rating: number;
   text: string;
-  sample: boolean;
 }
 
 export interface FAQItem {

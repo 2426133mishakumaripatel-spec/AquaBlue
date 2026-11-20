@@ -41,7 +41,7 @@
     color: #0f172a;
   }
   .hero-water-background {
-    background: transparent;
+    background: linear-gradient(135deg, #06192a 0%, #0b3158 55%, #071b36 100%);
   }
   .showcase-product-image {
     -webkit-mask-image: radial-gradient(ellipse 64% 76% at center, #000 38%, transparent 100%);
