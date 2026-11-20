@@ -25,8 +25,8 @@
     z-index: -1;
     pointer-events: none;
     background-image:
-      linear-gradient(rgba(6, 25, 42, 0.64), rgba(6, 25, 42, 0.64)),
-      url('./assets/water-bg.png');
+      linear-gradient(rgba(6, 25, 42, 0.7), rgba(6, 25, 42, 0.7)),
+      url('./assets/products/aqua-blue-1l.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

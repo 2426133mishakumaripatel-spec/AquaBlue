@@ -6,11 +6,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-<<<<<<< HEAD
     <section className="relative py-20 lg:py-28 bg-white/85 overflow-hidden">
-=======
-    <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
->>>>>>> d926c88325eed13913933e08358a034806667a1e
       <div className="section-padding relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-up">
           <span className="inline-block px-4 py-1.5 rounded-full bg-aqua-50 text-aqua-600 text-sm font-semibold mb-4">

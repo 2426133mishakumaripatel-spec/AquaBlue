@@ -60,11 +60,7 @@ export default function ProductDetail({
   };
 
   return (
-<<<<<<< HEAD
-    <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/90 to-white/90">
-=======
-    <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/50 to-white">
->>>>>>> d926c88325eed13913933e08358a034806667a1e
+    <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/85 to-white/85">
       <div className="section-padding py-8 lg:py-12">
         {/* Back button */}
         <button
@@ -82,11 +78,7 @@ export default function ProductDetail({
               <img
                 src={product.gallery[activeImage]}
                 alt={product.name}
-<<<<<<< HEAD
                 className="w-full h-full object-contain p-4"
-=======
-                className="w-full h-full object-cover"
->>>>>>> d926c88325eed13913933e08358a034806667a1e
               />
               {product.bestseller && (
                 <div className="absolute top-4 left-4 flex items-center gap-1 px-3 py-1.5 rounded-full bg-aqua-gradient text-white text-xs font-semibold shadow-lg">
@@ -107,11 +99,7 @@ export default function ProductDetail({
                       : 'border-transparent opacity-70 hover:opacity-100'
                   }`}
                 >
-<<<<<<< HEAD
                   <img src={img} alt={`${product.name} view ${i + 1}`} className="w-full h-full object-contain p-2" />
-=======
-                  <img src={img} alt={`${product.name} view ${i + 1}`} className="w-full h-full object-cover" />
->>>>>>> d926c88325eed13913933e08358a034806667a1e
                 </button>
               ))}
             </div>
@@ -217,11 +205,7 @@ export default function ProductDetail({
                     <img
                       src={p.image}
                       alt={p.name}
-<<<<<<< HEAD
                       className="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
-=======
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
->>>>>>> d926c88325eed13913933e08358a034806667a1e
                     />
                   </div>
                   <div className="p-4">

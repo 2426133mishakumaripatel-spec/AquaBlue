@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import { CartProvider, useCart } from './context/CartContext';
 import { ToastProvider } from './context/ToastContext';
 import { PRODUCTS } from './data';
@@ -83,11 +83,7 @@ function AppContent() {
     : [];
 
   return (
-<<<<<<< HEAD
     <div className="page-background min-h-screen overflow-x-hidden">
-=======
-    <div className="min-h-screen bg-white overflow-x-hidden">
->>>>>>> d926c88325eed13913933e08358a034806667a1e
       <PageLoader />
 
       <Navbar

@@ -2,7 +2,6 @@ import { useState, useMemo } from 'react';
 import { SlidersHorizontal, Droplet } from 'lucide-react';
 import type { Product } from '../types';
 import ProductCard from './ProductCard';
-import { CATEGORY_LABELS } from './ProductCard';
 
 interface ProductsProps {
   products: Product[];
@@ -28,11 +27,7 @@ export default function Products({ products, onDetails, onBuyNow }: ProductsProp
   }, [products, filter]);
 
   return (
-<<<<<<< HEAD
     <section id="products" className="relative py-20 lg:py-28 bg-gradient-to-b from-white/85 to-aqua-50/85 overflow-hidden">
-=======
-    <section id="products" className="relative py-20 lg:py-28 bg-gradient-to-b from-white to-aqua-50/50 overflow-hidden">
->>>>>>> d926c88325eed13913933e08358a034806667a1e
       <div className="section-padding relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 animate-fade-up">
@@ -41,7 +36,7 @@ export default function Products({ products, onDetails, onBuyNow }: ProductsProp
           </span>
           <h2 className="section-title text-navy-900 mb-4">Choose Your Perfect Size</h2>
           <p className="text-gray-600 text-base sm:text-lg">
-            From compact 250ml bottles to large 20-litre jars, Aqua Blue has the right size
+            From compact 200ml bottles to large 20-litre jars, Aqua Blue has the right size
             for every need. All products feature hygienic, sealed packaging.
           </p>
         </div>
@@ -68,7 +63,7 @@ export default function Products({ products, onDetails, onBuyNow }: ProductsProp
         </div>
 
         {/* Product grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filtered.map((product, i) => (
             <div
               key={product.id}
