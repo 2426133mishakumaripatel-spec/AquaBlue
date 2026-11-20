@@ -109,6 +109,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   Jothan Village, Near Saroli Sai Mandir, Olpad Road, Surat - 394520
                 </span>
               </li>
+<<<<<<< HEAD
               <li className="pl-7">
                 <a
                   href="https://maps.app.goo.gl/9KvXkCs98vdhzoqz9?g_st=iw"
@@ -120,6 +121,8 @@ export default function Footer({ onNavigate }: FooterProps) {
                   View Location on Google Maps
                 </a>
               </li>
+=======
+>>>>>>> d926c88325eed13913933e08358a034806667a1e
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-aqua-400 flex-shrink-0 mt-0.5" />
                 <span className="text-aqua-200/70">Mon-Sat: 7AM - 9PM</span>

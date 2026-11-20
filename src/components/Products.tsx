@@ -28,7 +28,11 @@ export default function Products({ products, onDetails, onBuyNow }: ProductsProp
   }, [products, filter]);
 
   return (
+<<<<<<< HEAD
     <section id="products" className="relative py-20 lg:py-28 bg-gradient-to-b from-white/85 to-aqua-50/85 overflow-hidden">
+=======
+    <section id="products" className="relative py-20 lg:py-28 bg-gradient-to-b from-white to-aqua-50/50 overflow-hidden">
+>>>>>>> d926c88325eed13913933e08358a034806667a1e
       <div className="section-padding relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 animate-fade-up">

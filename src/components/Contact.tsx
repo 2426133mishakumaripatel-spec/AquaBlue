@@ -18,7 +18,11 @@ export default function Contact() {
   };
 
   return (
+<<<<<<< HEAD
     <section id="contact" className="relative py-20 lg:py-28 bg-gradient-to-b from-white/85 to-aqua-50/85 overflow-hidden">
+=======
+    <section id="contact" className="relative py-20 lg:py-28 bg-gradient-to-b from-white to-aqua-50/50 overflow-hidden">
+>>>>>>> d926c88325eed13913933e08358a034806667a1e
       <div className="section-padding relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-up">
           <span className="inline-block px-4 py-1.5 rounded-full bg-aqua-100 text-aqua-600 text-sm font-semibold mb-4">
@@ -65,6 +69,7 @@ export default function Contact() {
                     Jothan Village, Near Saroli Sai Mandir,<br />
                     Olpad Road, Surat - 394520.
                   </p>
+<<<<<<< HEAD
                   <a
                     href="https://maps.app.goo.gl/9KvXkCs98vdhzoqz9?g_st=iw"
                     target="_blank"
@@ -74,6 +79,8 @@ export default function Contact() {
                     <MapPin className="w-4 h-4" />
                     View Location on Google Maps
                   </a>
+=======
+>>>>>>> d926c88325eed13913933e08358a034806667a1e
                 </div>
               </div>
             </div>

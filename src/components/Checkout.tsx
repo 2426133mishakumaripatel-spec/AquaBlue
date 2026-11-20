@@ -98,7 +98,11 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
 
   if (orderPlaced) {
     return (
+<<<<<<< HEAD
       <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/90 to-white/90 flex items-center justify-center px-4">
+=======
+      <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/50 to-white flex items-center justify-center px-4">
+>>>>>>> d926c88325eed13913933e08358a034806667a1e
         <div className="max-w-lg w-full text-center animate-scale-in">
           <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 className="w-14 h-14 text-green-600" />
@@ -121,7 +125,11 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
 
   if (items.length === 0) {
     return (
+<<<<<<< HEAD
       <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/90 to-white/90 flex items-center justify-center px-4">
+=======
+      <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/50 to-white flex items-center justify-center px-4">
+>>>>>>> d926c88325eed13913933e08358a034806667a1e
         <div className="max-w-lg w-full text-center animate-scale-in">
           <div className="w-24 h-24 rounded-full bg-aqua-50 flex items-center justify-center mx-auto mb-6">
             <ShoppingCart className="w-14 h-14 text-aqua-300" />
@@ -138,7 +146,11 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
   }
 
   return (
+<<<<<<< HEAD
     <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/90 to-white/90">
+=======
+    <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/50 to-white">
+>>>>>>> d926c88325eed13913933e08358a034806667a1e
       <div className="section-padding py-8 lg:py-12">
         <button
           onClick={onBack}
