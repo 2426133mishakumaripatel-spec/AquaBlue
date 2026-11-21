@@ -32,7 +32,7 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Contact info + map */}
+          {/* Contact info + location */}
           <div className="space-y-6 animate-fade-up">
             {/* Info cards */}
             <div className="grid sm:grid-cols-2 gap-4">
@@ -129,16 +129,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Map */}
-            <div className="rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-64">
-              <iframe
-                title="Aqua Blue Location"
-                src="https://www.google.com/maps?q=Saroli+Sai+Mandir+Olpad+Road+Surat&output=embed"
-                className="w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
           </div>
 
           {/* Contact form */}
