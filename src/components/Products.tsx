@@ -28,15 +28,15 @@ export default function Products({ products, onDetails, onBuyNow }: ProductsProp
   }, [products, filter]);
 
   return (
-    <section id="products" className="relative py-20 lg:py-28 bg-gradient-to-b from-white/85 to-aqua-50/85 overflow-hidden">
+    <section id="products" className="relative py-20 lg:py-28 overflow-hidden">
       <div className="section-padding relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 animate-fade-up">
           <span className="inline-block px-4 py-1.5 rounded-full bg-aqua-100 text-aqua-600 text-sm font-semibold mb-4">
             Our Products
           </span>
-          <h2 className="section-title text-navy-900 mb-4">Choose Your Perfect Size</h2>
-          <p className="text-gray-600 text-base sm:text-lg">
+          <h2 className="section-title text-white drop-shadow-md mb-4">Choose Your Perfect Size</h2>
+          <p className="text-white/90 drop-shadow-sm text-base sm:text-lg">
             From compact 250ml bottles to large 20-litre jars, Aqua Blue has the right size
             for every need. All products feature hygienic, sealed packaging.
           </p>
@@ -44,7 +44,7 @@ export default function Products({ products, onDetails, onBuyNow }: ProductsProp
 
         {/* Category filters */}
         <div className="flex items-center justify-center gap-2 flex-wrap mb-10 animate-fade-up" style={{ animationDelay: '100ms' }}>
-          <div className="flex items-center gap-1.5 text-aqua-600 text-sm font-medium mr-2">
+        <div className="flex items-center gap-1.5 text-white text-sm font-medium mr-2 drop-shadow-sm">
             <SlidersHorizontal className="w-4 h-4" />
             Filter:
           </div>
@@ -55,7 +55,7 @@ export default function Products({ products, onDetails, onBuyNow }: ProductsProp
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 filter === f.key
                   ? 'bg-aqua-gradient text-white shadow-lg shadow-aqua-500/30'
-                  : 'bg-white text-navy-700 border border-gray-200 hover:border-aqua-300 hover:text-aqua-600'
+                  : 'bg-white/80 backdrop-blur-md text-navy-700 border border-white/70 hover:border-aqua-300 hover:text-aqua-600'
               }`}
             >
               {f.label}
@@ -79,7 +79,7 @@ export default function Products({ products, onDetails, onBuyNow }: ProductsProp
         {filtered.length === 0 && (
           <div className="text-center py-16">
             <Droplet className="w-12 h-12 text-aqua-200 mx-auto mb-3" />
-            <p className="text-gray-500">No products in this category.</p>
+            <p className="text-white/90 drop-shadow-sm">No products in this category.</p>
           </div>
         )}
       </div>

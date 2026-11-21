@@ -2,7 +2,7 @@ import { Target, Heart, Sparkles, Droplet } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="relative py-20 lg:py-28 bg-white/85 overflow-hidden">
+    <section id="about" className="relative py-20 lg:py-28 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-aqua-50 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-aqua-100/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
@@ -13,8 +13,8 @@ export default function About() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-aqua-50 text-aqua-600 text-sm font-semibold mb-4">
             About Us
           </span>
-          <h2 className="section-title text-navy-900 mb-5">About Aqua Blue</h2>
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+          <h2 className="section-title text-white drop-shadow-md mb-5">About Aqua Blue</h2>
+          <p className="text-white/90 drop-shadow-sm text-base sm:text-lg leading-relaxed">
             At Aqua Blue, we aim to make drinking water convenient and accessible for homes,
             offices and businesses through our packaged drinking water products and delivery service.
           </p>
@@ -43,16 +43,16 @@ export default function About() {
 
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '150ms' }}>
             <div>
-              <h3 className="text-xl font-bold text-navy-900 mb-2 font-display">Brand Introduction</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white drop-shadow-sm mb-2 font-display">Brand Introduction</h3>
+              <p className="text-white/90 drop-shadow-sm leading-relaxed">
                 Aqua Blue is a packaged drinking water brand dedicated to providing clean, refreshing
                 water in convenient bottle and jar sizes. From small personal bottles to large 20-litre
                 jars, we serve homes, offices, and businesses across our delivery area.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-navy-900 mb-2 font-display">Brand Story</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white drop-shadow-sm mb-2 font-display">Brand Story</h3>
+              <p className="text-white/90 drop-shadow-sm leading-relaxed">
                 Aqua Blue was created with a simple goal: to make quality drinking water easily
                 accessible. We focus on convenient packaging, reliable delivery, and responsive
                 customer service so that fresh water is always within reach.
@@ -94,7 +94,7 @@ function FeatureCard({
 }) {
   return (
     <div
-      className="group relative bg-gradient-to-br from-aqua-50 to-white p-8 rounded-3xl border border-aqua-100 card-hover animate-fade-up"
+      className="group relative bg-white/90 backdrop-blur-md text-slate-900 p-8 rounded-3xl border border-white/70 card-hover animate-fade-up"
       style={{ animationDelay: delay }}
     >
       <div className="w-14 h-14 rounded-2xl bg-aqua-gradient flex items-center justify-center text-white mb-5 shadow-lg shadow-aqua-500/30 group-hover:scale-110 transition-transform duration-300">

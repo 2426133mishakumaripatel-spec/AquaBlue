@@ -6,14 +6,14 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative py-20 lg:py-28 bg-white/85 overflow-hidden">
+    <section className="relative py-20 lg:py-28 overflow-hidden">
       <div className="section-padding relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-up">
           <span className="inline-block px-4 py-1.5 rounded-full bg-aqua-50 text-aqua-600 text-sm font-semibold mb-4">
             FAQ
           </span>
-          <h2 className="section-title text-navy-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-gray-600 text-base sm:text-lg">
+          <h2 className="section-title text-white drop-shadow-md mb-4">Frequently Asked Questions</h2>
+          <p className="text-white/90 drop-shadow-sm text-base sm:text-lg">
             Have questions? We have answers. Find everything you need to know about Aqua Blue.
           </p>
         </div>
@@ -26,8 +26,8 @@ export default function FAQ() {
                 key={i}
                 className={`rounded-2xl border-2 transition-all duration-300 overflow-hidden animate-fade-up ${
                   isOpen
-                    ? 'border-aqua-300 bg-aqua-50/50 shadow-md shadow-aqua-500/10'
-                    : 'border-gray-100 bg-white hover:border-aqua-200'
+                    ? 'border-aqua-300 bg-white/90 backdrop-blur-md shadow-md shadow-aqua-500/10'
+                    : 'border-white/70 bg-white/90 backdrop-blur-md hover:border-aqua-200'
                 }`}
                 style={{ animationDelay: `${i * 60}ms` }}
               >

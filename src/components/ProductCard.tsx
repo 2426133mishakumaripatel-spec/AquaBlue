@@ -29,7 +29,7 @@ export default function ProductCard({ product, onDetails, onBuyNow }: ProductCar
   };
 
   return (
-    <div className="group relative bg-white rounded-3xl overflow-hidden border border-gray-100 card-hover flex flex-col">
+    <div className="group relative bg-white/90 backdrop-blur-md text-slate-900 rounded-3xl overflow-hidden border border-white/70 card-hover flex flex-col">
       {/* Bestseller badge */}
       {product.bestseller && (
         <div className="absolute top-4 left-4 z-10 flex items-center gap-1 px-3 py-1 rounded-full bg-aqua-gradient text-white text-xs font-semibold shadow-lg">

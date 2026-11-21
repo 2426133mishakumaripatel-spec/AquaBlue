@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, MapPin, Facebook, Instagram, Youtube, Droplet, Clock } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Droplet, Clock, Mail } from 'lucide-react';
 import Logo from './Logo';
 import { PRODUCTS } from '../data';
 import { getSimpleWhatsAppUrl } from '../utils';
@@ -18,12 +18,13 @@ const QUICK_LINKS = [
 
 export default function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer className="relative bg-navy-950 text-white overflow-hidden">
+    <footer className="relative bg-blue-950/40 backdrop-blur-md text-white overflow-hidden">
       {/* Water wave top */}
       <div className="absolute top-0 left-0 right-0 h-12 overflow-hidden">
         <svg viewBox="0 0 1440 80" className="w-full h-full" preserveAspectRatio="none">
           <path
             fill="#ffffff"
+            fillOpacity="0.3"
             d="M0,40L80,35C160,30,320,20,480,25C640,30,800,50,960,50C1120,50,1280,30,1360,20L1440,10L1440,0L0,0Z"
           />
         </svg>
@@ -36,27 +37,22 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Logo variant="light" />
-            <p className="text-aqua-200/70 text-sm leading-relaxed mt-5 mb-5">
+            <Logo />
+            <p className="text-white/80 text-sm leading-relaxed mt-5">
               Pure drinking water for your home, office and everyday needs. Conveniently
               delivered to your doorstep.
             </p>
-            <div className="flex items-center gap-3">
-              <SocialLink href="#" icon={<Facebook className="w-5 h-5" />} label="Facebook" />
-              <SocialLink href="#" icon={<Instagram className="w-5 h-5" />} label="Instagram" />
-              <SocialLink href="#" icon={<Youtube className="w-5 h-5" />} label="YouTube" />
-            </div>
           </div>
 
           {/* Quick links */}
           <div>
-            <h3 className="font-display font-bold text-base mb-4 text-aqua-200">Quick Links</h3>
+            <h3 className="font-display font-bold text-base mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2.5">
               {QUICK_LINKS.map((link) => (
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-aqua-200/70 text-sm hover:text-aqua-300 transition-colors"
+                    className="text-white/80 text-sm hover:text-white transition-colors"
                   >
                     {link.label}
                   </button>
@@ -67,13 +63,13 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Products */}
           <div>
-            <h3 className="font-display font-bold text-base mb-4 text-aqua-200">Our Products</h3>
+            <h3 className="font-display font-bold text-base mb-4 text-white">Our Products</h3>
             <ul className="space-y-2.5">
               {PRODUCTS.map((p) => (
                 <li key={p.id}>
                   <button
                     onClick={() => onNavigate('products')}
-                    className="text-aqua-200/70 text-sm hover:text-aqua-300 transition-colors text-left"
+                    className="text-white/80 text-sm hover:text-white transition-colors text-left"
                   >
                     {p.size} Bottle
                   </button>
@@ -84,12 +80,21 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Contact */}
           <div>
-            <h3 className="font-display font-bold text-base mb-4 text-aqua-200">Contact Details</h3>
+            <h3 className="font-display font-bold text-base mb-4 text-white">Contact Details</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-aqua-400 flex-shrink-0 mt-0.5" />
-                <a href="tel:+918200745595" className="text-aqua-200/70 hover:text-aqua-300 transition-colors">
+                <a href="tel:+918200745595" className="text-white/80 hover:text-white transition-colors">
                   +91 8200745595
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-aqua-400 flex-shrink-0 mt-0.5" />
+                <a
+                  href="mailto:aquablue6677@gmail.com"
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  aquablue6677@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -98,14 +103,14 @@ export default function Footer({ onNavigate }: FooterProps) {
                   href={getSimpleWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-aqua-200/70 hover:text-aqua-300 transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   WhatsApp Chat
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-aqua-400 flex-shrink-0 mt-0.5" />
-                <span className="text-aqua-200/70">
+                <span className="text-white/80">
                   Jothan Village, Near Saroli Sai Mandir, Olpad Road, Surat - 394520
                 </span>
               </li>
@@ -114,43 +119,31 @@ export default function Footer({ onNavigate }: FooterProps) {
                   href="https://maps.app.goo.gl/9KvXkCs98vdhzoqz9?g_st=iw"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-aqua-400/40 px-3 py-2 text-sm font-medium text-aqua-200 hover:border-aqua-300 hover:bg-aqua-500/10 hover:text-aqua-100 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-3 py-2 text-sm font-medium text-white/90 hover:border-white/40 hover:bg-white/10 hover:text-white transition-colors"
                 >
-                  <MapPin className="w-4 h-4 text-aqua-400" />
+                  <MapPin className="w-4 h-4 text-aqua-300" />
                   View Location on Google Maps
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-aqua-400 flex-shrink-0 mt-0.5" />
-                <span className="text-aqua-200/70">Mon-Sat: 7AM - 9PM</span>
+                <span className="text-white/80">Mon-Sat: 7AM - 9PM</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-aqua-200/50 text-sm text-center sm:text-left">
+        <div className="pt-8 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-white/70 text-sm text-center sm:text-left">
             © {new Date().getFullYear()} Aqua Blue - Pure Drinking Water. All rights reserved.
           </p>
-          <div className="flex items-center gap-1.5 text-aqua-200/50 text-sm">
-            <Droplet className="w-4 h-4 text-aqua-400" fill="currentColor" />
+          <div className="flex items-center gap-1.5 text-white/70 text-sm">
+            <Droplet className="w-4 h-4 text-aqua-300" fill="currentColor" />
             <span>Pure. Fresh. Delivered.</span>
           </div>
         </div>
       </div>
     </footer>
-  );
-}
-
-function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
-  return (
-    <a
-      href={href}
-      aria-label={label}
-      className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-aqua-200/70 hover:bg-aqua-gradient hover:text-white hover:border-transparent transition-all duration-300"
-    >
-      {icon}
-    </a>
   );
 }

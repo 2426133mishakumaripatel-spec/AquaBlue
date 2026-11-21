@@ -8,7 +8,7 @@
   }
   html {
     scroll-behavior: smooth;
-    background-color: #06192a;
+    background-color: #061b52;
   }
   body {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -25,11 +25,17 @@
     z-index: -1;
     pointer-events: none;
     background-image:
-      linear-gradient(rgba(6, 25, 42, 0.64), rgba(6, 25, 42, 0.64)),
-      url('./assets/water-bg.png');
+      linear-gradient(
+        115deg,
+        rgba(3, 13, 35, 0.68) 0%,
+        rgba(5, 25, 57, 0.54) 52%,
+        rgba(6, 27, 82, 0.42) 100%
+      ),
+      url('/aqua-bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Sora', system-ui, sans-serif;
@@ -40,8 +46,8 @@
   .page-background {
     color: #0f172a;
   }
-  .hero-water-background {
-    background: linear-gradient(135deg, #06192a 0%, #0b3158 55%, #071b36 100%);
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-white/70 rounded-3xl shadow-lg shadow-blue-950/5;
   }
   .showcase-product-image {
     -webkit-mask-image: radial-gradient(ellipse 64% 76% at center, #000 38%, transparent 100%);

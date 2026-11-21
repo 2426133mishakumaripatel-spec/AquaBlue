@@ -1,5 +1,5 @@
 import { ShoppingBag, MessageCircle, Droplets, Sparkles } from 'lucide-react';
-import aquaBlue1l from '../assets/products/aqua-blue-1l.png';
+import aquaBlue1lHero from '../assets/products/aqua-blue-1l-hero.png';
 
 interface HeroProps {
   onShopNow: () => void;
@@ -10,7 +10,7 @@ export default function Hero({ onShopNow, onWhatsApp }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 lg:pt-24 overflow-hidden hero-water-background"
+      className="relative min-h-screen flex items-center pt-20 lg:pt-24 overflow-hidden"
     >
       {/* Animated background blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -18,6 +18,8 @@ export default function Hero({ onShopNow, onWhatsApp }: HeroProps) {
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-aqua-500/10 rounded-full blur-3xl animate-float-delay" />
         <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-royal-400/10 rounded-full blur-3xl animate-float-slow" />
       </div>
+
+      <div className="absolute inset-0 z-[1] pointer-events-none bg-gradient-to-r from-[#03112f]/50 via-[#062b55]/25 to-transparent" />
 
       {/* Floating droplets */}
       <FloatingDroplets />
@@ -30,17 +32,17 @@ export default function Hero({ onShopNow, onWhatsApp }: HeroProps) {
             Pure Drinking Water
           </div>
 
-          <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight text-white leading-[1.1] mb-4">
+          <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight text-white drop-shadow-md leading-[1.1] mb-4">
             PURE WATER.
             <br />
-            <span className="text-gradient-light">PURE LIFE.</span>
+            <span className="text-white drop-shadow-md">PURE LIFE.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-white/90 font-medium mb-3">
+          <p className="text-lg sm:text-xl text-white drop-shadow-md font-medium mb-3">
             Experience freshness in every drop with Aqua Blue Pure Drinking Water.
           </p>
 
-          <p className="text-sm sm:text-base text-sky-100/85 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base text-white drop-shadow-md max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
             Quality-focused packaged drinking water for your home, office and everyday needs.
             Now conveniently delivered to your doorstep.
           </p>
@@ -62,9 +64,9 @@ export default function Hero({ onShopNow, onWhatsApp }: HeroProps) {
           {/* Quick stats */}
           <div className="flex items-center gap-6 sm:gap-8 mt-10 justify-center lg:justify-start">
             <Stat value="4" label="Bottle Sizes" />
-            <div className="w-px h-10 bg-white/30" />
+            <div className="w-px h-10 bg-white/40" />
             <Stat value="Free" label="Home Delivery" />
-            <div className="w-px h-10 bg-white/30" />
+            <div className="w-px h-10 bg-white/40" />
             <Stat value="20L" label="Water Jars" />
           </div>
         </div>
@@ -84,6 +86,7 @@ export default function Hero({ onShopNow, onWhatsApp }: HeroProps) {
         >
           <path
             fill="#ffffff"
+            fillOpacity="0.45"
             d="M0,60L80,65C160,70,320,80,480,75C640,70,800,50,960,45C1120,40,1280,50,1360,55L1440,60L1440,120L0,120Z"
           />
         </svg>
@@ -95,8 +98,8 @@ export default function Hero({ onShopNow, onWhatsApp }: HeroProps) {
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex flex-col">
-      <span className="text-2xl sm:text-3xl font-bold text-white font-display">{value}</span>
-      <span className="text-xs sm:text-sm text-sky-100">{label}</span>
+      <span className="text-2xl sm:text-3xl font-bold text-white font-display drop-shadow-sm">{value}</span>
+      <span className="text-xs sm:text-sm text-white/95 drop-shadow-md">{label}</span>
     </div>
   );
 }
@@ -106,9 +109,9 @@ function ProductShowcase() {
     <div className="relative mx-auto w-full max-w-md lg:max-w-lg aspect-square">
       {/* Main bottle image */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative z-10 w-[68%] aspect-square rounded-full overflow-hidden animate-float">
+        <div className="relative z-10 w-[68%] aspect-square rounded-full overflow-hidden border-[3px] border-white animate-float">
           <img
-            src={aquaBlue1l}
+            src={aquaBlue1lHero}
             alt="Aqua Blue 1 litre water bottle"
             className="showcase-product-image w-full h-full rounded-full object-cover"
             style={{ filter: 'drop-shadow(0 20px 30px rgba(0,0,0,0.28))' }}

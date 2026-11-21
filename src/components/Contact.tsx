@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, MessageCircle, MapPin, Clock, Send, Mail } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock, Send, Mail, Instagram } from 'lucide-react';
 import { useToast } from '../context/ToastContext';
 import { getSimpleWhatsAppUrl } from '../utils';
 
@@ -18,14 +18,14 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 lg:py-28 bg-gradient-to-b from-white/85 to-aqua-50/85 overflow-hidden">
+    <section id="contact" className="relative py-20 lg:py-28 overflow-hidden">
       <div className="section-padding relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-up">
           <span className="inline-block px-4 py-1.5 rounded-full bg-aqua-100 text-aqua-600 text-sm font-semibold mb-4">
             Contact Us
           </span>
-          <h2 className="section-title text-navy-900 mb-4">Get In Touch</h2>
-          <p className="text-gray-600 text-base sm:text-lg">
+          <h2 className="section-title text-white drop-shadow-md mb-4">Get In Touch</h2>
+          <p className="text-white/90 drop-shadow-sm text-base sm:text-lg">
             Have questions or want to place an order? Reach out to us and our team will
             be happy to help.
           </p>
@@ -51,10 +51,25 @@ export default function Contact() {
                 actionLabel="Chat Now"
                 green
               />
+              <InfoCard
+                icon={<Mail className="w-6 h-6" />}
+                title="Email Us"
+                value="aquablue6677@gmail.com"
+                href="mailto:aquablue6677@gmail.com"
+                actionLabel="Send Email"
+              />
+              <InfoCard
+                icon={<Instagram className="w-6 h-6" />}
+                title="Instagram"
+                value="@aqua_bule_1205"
+                href="https://www.instagram.com/aqua_bule_1205/"
+                actionLabel="View Profile"
+                openInNewTab
+              />
             </div>
 
             {/* Address */}
-            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-white/70 shadow-sm">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-aqua-gradient flex items-center justify-center text-white flex-shrink-0">
                   <MapPin className="w-6 h-6" />
@@ -65,21 +80,32 @@ export default function Contact() {
                     Jothan Village, Near Saroli Sai Mandir,<br />
                     Olpad Road, Surat - 394520.
                   </p>
-                  <a
-                    href="https://maps.app.goo.gl/9KvXkCs98vdhzoqz9?g_st=iw"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 rounded-xl bg-aqua-50 px-4 py-2.5 text-sm font-semibold text-aqua-700 transition-colors hover:bg-aqua-100"
-                  >
-                    <MapPin className="w-4 h-4" />
-                    View Location on Google Maps
-                  </a>
+                  <div className="mt-4 flex flex-col items-start gap-2">
+                    <a
+                      href="https://maps.app.goo.gl/9KvXkCs98vdhzoqz9?g_st=iw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl bg-aqua-50 px-4 py-2.5 text-sm font-semibold text-aqua-700 transition-colors hover:bg-aqua-100"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      View Location on Google Maps
+                    </a>
+                    <a
+                      href="https://maps.app.goo.gl/9KvXkCs98vdhzoqz9?g_st=iw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl bg-aqua-50 px-4 py-2.5 text-sm font-semibold text-aqua-700 transition-colors hover:bg-aqua-100"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Second Location / Branch
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Business hours */}
-            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-white/70 shadow-sm">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-aqua-100 flex items-center justify-center text-aqua-600 flex-shrink-0">
                   <Clock className="w-6 h-6" />
@@ -117,7 +143,7 @@ export default function Contact() {
 
           {/* Contact form */}
           <div className="animate-fade-up" style={{ animationDelay: '100ms' }}>
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm">
+            <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/70 shadow-sm">
               <h3 className="font-display font-bold text-xl text-navy-900 mb-5">Send Us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -180,6 +206,7 @@ function InfoCard({
   href,
   actionLabel,
   green,
+  openInNewTab,
 }: {
   icon: React.ReactNode;
   title: string;
@@ -187,9 +214,10 @@ function InfoCard({
   href: string;
   actionLabel: string;
   green?: boolean;
+  openInNewTab?: boolean;
 }) {
   return (
-    <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm card-hover">
+    <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-white/70 shadow-sm card-hover">
       <div
         className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white mb-4 ${
           green ? 'bg-green-500' : 'bg-aqua-gradient'
@@ -201,8 +229,8 @@ function InfoCard({
       <p className="text-gray-600 text-sm mb-3">{value}</p>
       <a
         href={href}
-        target={green ? '_blank' : undefined}
-        rel={green ? 'noopener noreferrer' : undefined}
+        target={green || openInNewTab ? '_blank' : undefined}
+        rel={green || openInNewTab ? 'noopener noreferrer' : undefined}
         className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${
           green ? 'text-green-600 hover:text-green-700' : 'text-aqua-600 hover:text-aqua-700'
         }`}

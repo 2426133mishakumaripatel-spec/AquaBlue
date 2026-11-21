@@ -98,8 +98,8 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
 
   if (orderPlaced) {
     return (
-<div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/90 to-white/90 flex items-center justify-center px-4">
-        <div className="max-w-lg w-full text-center animate-scale-in">
+<div className="pt-20 lg:pt-24 min-h-screen flex items-center justify-center px-4">
+        <div className="max-w-lg w-full text-center animate-scale-in glass-panel p-8">
           <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 className="w-14 h-14 text-green-600" />
           </div>
@@ -121,8 +121,8 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
 
   if (items.length === 0) {
     return (
-      <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/90 to-white/90 flex items-center justify-center px-4">
-        <div className="max-w-lg w-full text-center animate-scale-in">
+      <div className="pt-20 lg:pt-24 min-h-screen flex items-center justify-center px-4">
+        <div className="max-w-lg w-full text-center animate-scale-in glass-panel p-8">
           <div className="w-24 h-24 rounded-full bg-aqua-50 flex items-center justify-center mx-auto mb-6">
             <ShoppingCart className="w-14 h-14 text-aqua-300" />
           </div>
@@ -138,8 +138,8 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
   }
 
   return (
-    <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/90 to-white/90">
-      <div className="section-padding py-8 lg:py-12">
+    <div className="pt-20 lg:pt-24 min-h-screen">
+      <div className="section-padding py-8 lg:py-12 rounded-3xl bg-white/80 backdrop-blur-md border border-white/70">
         <button
           onClick={onBack}
           className="flex items-center gap-2 text-aqua-600 font-medium hover:text-aqua-700 transition-colors mb-6 animate-fade-in"
@@ -153,7 +153,7 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Customer info form */}
           <div className="lg:col-span-2 space-y-6 animate-fade-up">
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 shadow-sm border border-white/70">
               <h2 className="font-display font-bold text-lg text-navy-900 mb-5 flex items-center gap-2">
                 <User className="w-5 h-5 text-aqua-500" />
                 Customer Information
@@ -201,7 +201,7 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 shadow-sm border border-white/70">
               <h2 className="font-display font-bold text-lg text-navy-900 mb-5 flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-aqua-500" />
                 Delivery Address
@@ -249,7 +249,7 @@ export default function Checkout({ onBack, onOrderPlaced }: CheckoutProps) {
 
           {/* Order summary */}
           <div className="animate-fade-up" style={{ animationDelay: '100ms' }}>
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 sticky top-24">
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 shadow-sm border border-white/70 sticky top-24">
               <h2 className="font-display font-bold text-lg text-navy-900 mb-5 flex items-center gap-2">
                 <ShoppingCart className="w-5 h-5 text-aqua-500" />
                 Order Summary

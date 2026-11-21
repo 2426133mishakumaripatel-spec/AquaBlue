@@ -16,7 +16,7 @@ export default function HomeDelivery({ onBookDelivery }: HomeDeliveryProps) {
   return (
     <section
       id="delivery"
-      className="relative py-20 lg:py-28 overflow-hidden bg-navy-gradient"
+      className="relative py-20 lg:py-28 overflow-hidden"
     >
       {/* Water wave background */}
       <div className="absolute inset-0 opacity-10">
@@ -35,14 +35,14 @@ export default function HomeDelivery({ onBookDelivery }: HomeDeliveryProps) {
       <div className="section-padding relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div className="text-center lg:text-left animate-fade-up">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-aqua-200 text-sm font-semibold mb-4 border border-white/10">
+          <div className="text-center lg:text-left animate-fade-up bg-blue-950/50 backdrop-blur-md border border-white/20 rounded-3xl p-6 sm:p-8">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-semibold mb-4 border border-white/20">
               Home Delivery
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white tracking-tight mb-5 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white drop-shadow-md tracking-tight mb-5 leading-tight">
               Fresh Water Delivered to Your Doorstep
             </h2>
-            <p className="text-aqua-100/80 text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="text-white/90 drop-shadow-sm text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
               Enjoy the convenience of Aqua Blue drinking water delivered directly to your
               home, office or business. Just order online or via WhatsApp and we will bring
               fresh water right to you.
@@ -55,7 +55,7 @@ export default function HomeDelivery({ onBookDelivery }: HomeDeliveryProps) {
                 return (
                   <div
                     key={feat.title}
-                    className="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm card-hover animate-fade-up"
+                    className="flex items-start gap-3 p-4 rounded-2xl bg-blue-950/50 backdrop-blur-md border border-white/20 card-hover animate-fade-up"
                     style={{ animationDelay: `${i * 100}ms` }}
                   >
                     <div className="w-10 h-10 rounded-xl bg-aqua-gradient flex items-center justify-center flex-shrink-0">
@@ -63,7 +63,7 @@ export default function HomeDelivery({ onBookDelivery }: HomeDeliveryProps) {
                     </div>
                     <div>
                       <h3 className="font-semibold text-white text-sm mb-1">{feat.title}</h3>
-                      <p className="text-aqua-200/70 text-xs leading-relaxed">{feat.description}</p>
+                      <p className="text-white/80 text-xs leading-relaxed">{feat.description}</p>
                     </div>
                   </div>
                 );
@@ -87,14 +87,13 @@ export default function HomeDelivery({ onBookDelivery }: HomeDeliveryProps) {
                 alt="Water delivery service"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 glass-dark rounded-2xl p-4 flex items-center gap-4">
+              <div className="absolute bottom-6 left-6 right-6 bg-blue-950/50 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-aqua-gradient flex items-center justify-center flex-shrink-0">
                   <Truck className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">Free Delivery on 20L Jars</p>
-                  <p className="text-aqua-200/70 text-xs">Within our service area in Surat</p>
+                  <p className="text-white/80 text-xs">Within our service area in Surat</p>
                 </div>
               </div>
             </div>

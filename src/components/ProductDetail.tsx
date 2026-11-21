@@ -60,8 +60,8 @@ export default function ProductDetail({
   };
 
   return (
-    <div className="pt-20 lg:pt-24 min-h-screen bg-gradient-to-b from-aqua-50/90 to-white/90">
-      <div className="section-padding py-8 lg:py-12">
+    <div className="pt-20 lg:pt-24 min-h-screen">
+      <div className="section-padding py-8 lg:py-12 rounded-3xl bg-white/80 backdrop-blur-md border border-white/70">
         {/* Back button */}
         <button
           onClick={onBack}
@@ -199,7 +199,7 @@ export default function ProductDetail({
                     setActiveImage(0);
                     setQuantity(1);
                   }}
-                  className="group bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover text-left"
+                  className="group bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden border border-white/70 card-hover text-left"
                 >
                   <div className="relative aspect-square overflow-hidden bg-aqua-50">
                     <img

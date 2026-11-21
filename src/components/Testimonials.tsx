@@ -4,14 +4,14 @@ import { TESTIMONIALS } from '../data';
 
 export default function Testimonials() {
   return (
-    <section className="relative py-20 lg:py-28 bg-gradient-to-b from-aqua-50/85 to-white/85 overflow-hidden">
+    <section className="relative py-20 lg:py-28 overflow-hidden">
       <div className="section-padding relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14 animate-fade-up">
           <span className="inline-block px-4 py-1.5 rounded-full bg-aqua-100 text-aqua-600 text-sm font-semibold mb-4">
             Our Customers
           </span>
-          <h2 className="section-title text-navy-900 mb-4">What Our Customers Say</h2>
-          <p className="text-gray-600 text-base sm:text-lg">
+          <h2 className="section-title text-white drop-shadow-md mb-4">What Our Customers Say</h2>
+          <p className="text-white/90 drop-shadow-sm text-base sm:text-lg">
             We value every customer and strive to deliver the best service. Here is what
             people have to say about Aqua Blue.
           </p>
@@ -21,7 +21,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t, i) => (
             <div
               key={t.id}
-              className="group relative bg-white rounded-3xl p-6 border border-gray-100 card-hover animate-fade-up"
+              className="group relative bg-white/90 backdrop-blur-md text-slate-900 rounded-3xl p-6 border border-white/70 card-hover animate-fade-up"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <Quote className="absolute top-5 right-5 w-8 h-8 text-aqua-100" />

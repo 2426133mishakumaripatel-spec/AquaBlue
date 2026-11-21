@@ -114,7 +114,7 @@ export default function Navbar({ onSearchOpen, onCartOpen, onNavigate, onOrderNo
             className="absolute inset-0 bg-navy-950/40 backdrop-blur-sm animate-fade-in"
             onClick={() => setMobileOpen(false)}
           />
-          <div className="absolute top-16 sm:top-18 left-0 right-0 bg-white shadow-2xl rounded-b-3xl overflow-hidden animate-fade-up">
+          <div className="absolute top-16 sm:top-18 left-0 right-0 bg-white/90 backdrop-blur-md shadow-2xl rounded-b-3xl overflow-hidden animate-fade-up">
             <ul className="flex flex-col p-4">
               {NAV_LINKS.map((link, i) => (
                 <li

@@ -11,7 +11,7 @@ const ICONS: Record<string, React.ElementType> = {
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="relative py-20 lg:py-28 bg-white/85 overflow-hidden">
+    <section id="why" className="relative py-20 lg:py-28 overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-aqua-50/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-aqua-100/40 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
@@ -20,8 +20,8 @@ export default function WhyChooseUs() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-aqua-50 text-aqua-600 text-sm font-semibold mb-4">
             Why Choose Us
           </span>
-          <h2 className="section-title text-navy-900 mb-4">Why Choose Aqua Blue</h2>
-          <p className="text-gray-600 text-base sm:text-lg">
+          <h2 className="section-title text-white drop-shadow-md mb-4">Why Choose Aqua Blue</h2>
+          <p className="text-white/90 drop-shadow-sm text-base sm:text-lg">
             We are dedicated to providing quality drinking water with reliable service that
             you can count on, every time.
           </p>
@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={feat.title}
-                className="group relative bg-gradient-to-br from-white to-aqua-50/30 p-6 rounded-3xl border border-gray-100 card-hover text-center animate-fade-up"
+                className="group relative bg-white/90 backdrop-blur-md text-slate-900 p-6 rounded-3xl border border-white/70 card-hover text-center animate-fade-up"
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <div className="relative mx-auto w-16 h-16 mb-5">
